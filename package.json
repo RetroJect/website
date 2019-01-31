@@ -1,0 +1,31 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "A small Node Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx pm2 start index.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RetroJect/Website.git"
+  },
+  "keywords": [
+    "Node",
+    "HTML",
+    "Pug"
+  ],
+  "author": "Grayson Doshier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RetroJect/Website/issues"
+  },
+  "homepage": "https://github.com/RetroJect/Website#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "pm2": "^3.2.9"
+  }
+}

@@ -44,7 +44,7 @@ app.get('/software', (req, res) => {
     repos: JSON.stringify(repositories),
     readmes: JSON.stringify(readmeHtml)
   })
-})
+});
 
 function fileError(error) {
   console.log("Couldn't write to file!");

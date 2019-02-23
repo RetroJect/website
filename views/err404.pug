@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    title #{title}
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
+    meta(name='viewport', content="width=device-width, initial-scale=1")
+  body
+    div.container.text-center#Content
+      h1.text-danger
+        b Error 404
+      p
+        | Maybe you took a wrong turn? This page doesn't seem to exist...
+        br
+        i  - Grayson (RetroJect)
+        br
+        a(href="/") Return Home

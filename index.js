@@ -46,6 +46,16 @@ app.get('/software', (req, res) => {
   })
 });
 
+app.get('/resume', (req, res) => {
+  res.redirect('/resume.pdf');
+})
+
+app.get('*', (req, res) => {
+  res.render('err404', {
+    title: 'Error 404'
+  })
+});
+
 function fileError(error) {
   console.log("Couldn't write to file!");
   console.log("Error: "+error);

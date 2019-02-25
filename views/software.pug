@@ -6,6 +6,8 @@ block content
     p
       | Below you can find a list of all of my repositories on GitHub.
       | These are all personal projects that I make open source as I'm developing them.
+      | Please note that currently the README document may not match up with the repository it's associated with.
+      | I am aware of this issue and trying to find the cause of it.
     hr
     div.d-flex.justify-content-between
       - var repositories = JSON.parse(repos);
@@ -26,7 +28,7 @@ block content
             - var update = new Date(repo.updated_at);
             = update.toDateString()
             br
-            | Size (MB): 
+            | Size (KB): 
             = repo.size
           h6 README.md
           div.git.p-2

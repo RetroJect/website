@@ -1,36 +1,69 @@
 extends default
 
+block headers
+  link(rel='stylesheet', type='text/css', href='../css/home.css')
+
 block content
-  div#Content
-    div#Banner
-      div.text-center#bannerText
-        h1#bannerTitle Grayson Doshier
-        h4#bannerTag Software Engineer, Student, Hobbyist
-    div.container.pt-4.pb-1#About
-      h3 About Me
-      p
-        | I am a college student pursuing a degree in computer science.
-        | Computers and electronics have been a passion of mine for a long time, which led me to chase the dream of becoming a software engineer.
-        | All of my time is devoted to learning more about everything that I can.
-        | While the majority of my skills were taught to me by a professor, I have also taught myself many differnt things.
-        | Overall I seek out knowledge wherever I can, about whatever I can find; nothing is out of reach for me.
-    div.pt-4.pb-1.Gray#Software
-      div.container
-        h3 Software
-        p
-          | I am professioally trained in C++ and C through my university which is reflected in some of my personal projects.
-          | I have, however, taught myself how to use multiple other languages including Java, Javascript, HTML, CSS, PHP, and Python.
-          | All of my software from 2019 onwards is hosted on my Github page.
-          | To view my code in more depth visit my Software section 
-          a.plainLink(href="/software") here.
-    div.pt-4.pb-1.container#Hobbies
-      h3 Hobbies
-      p
-        | My personal time consists of many things, but it's mostly programming.
-        | I run a YouTube channel in my spare time making content focusing mainly on video games.
-        | Sometimes I will make a video detailing and demonstrating projects that I'm currently working on.
-        | In those videos I explain the process that I went through designing, developing, and testing my code.
-      p
-        | In conjunction with YouTube, I also stream games on Twitch occasionally.
-        | I enjoy livestreaming as it gives me a chance to interact with viewers live, giving them a chance to influence my choices.
-        | Streaming is something that I do fairly rarely, but the streams usally last for at least an hour.
+  // Header and Navigation
+  .ui.inverted.vertical.masthead.center.aligned.segment#Top
+    .ui.container
+      .ui.large.inverted.labeled.pointing.secondary.menu
+        a.item.active
+          i.home.icon
+          | Home
+        a.item
+          i.code.icon
+          | Experience
+        a.item
+          i.github.icon
+          | Projects
+    .ui.text.container
+      h1.ui.header.inverted A Header!
+      h2 Header 2 Electric Boogaloo
+
+  //- Spacer
+  .ui.hidden.divider
+
+  // Experience Section
+  .ui.container
+    h2.ui.horizontal.divider.header
+      i.code.icon
+      | Experience
+
+  //- Spacer
+  .ui.hidden.divider
+
+  // Projects Section
+  .ui.container
+    h2.ui.horizontal.divider.header
+      i.github.icon
+      | Projects
+
+  //- Spacer
+  .ui.hidden.divider
+
+  // Footer
+  .ui.inverted.vertical.segment
+    .ui.container
+      .ui.stackable.inverted.divided.equal.height.grid.center.aligned
+        .five.wide.column
+          h4.ui.inverted.header Made with NodeJS and Express
+          p Find the source code for this page on 
+            a(href="https://github.com/RetroJect/Website/") GitHub
+        .five.wide.column
+          h4.ui.inverted.header Created by Grayson Doshier
+          .ui.center.aligned.container
+            a(href="https://github.com/RetroJect/")
+              i.large.link.circular.github.icon
+            a(href="https://github.com/RetroJect/")
+              i.large.link.circular.linkedin.icon
+            a(href="https://github.com/RetroJect/")
+              i.large.link.circular.twitter.icon
+            a(href="https://github.com/RetroJect/")
+              i.large.link.circular.youtube.icon
+            a(href="https://github.com/RetroJect/")
+              i.large.link.circular.twitch.icon
+        .three.wide.column
+          button.ui.blue.inverted.labeled.icon.button(href='#Top')
+            i.angle.double.up.icon
+            | To The Top

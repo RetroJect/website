@@ -19,7 +19,7 @@ block content
           | Projects
     .ui.text.container
       h1.ui.header.inverted A Header!
-      h2 Header 2 Electric Boogaloo
+      h2 Header 2: Electric Boogaloo
 
   //- Spacer
   .ui.hidden.divider
@@ -38,6 +38,40 @@ block content
     h2.ui.horizontal.divider.header
       i.github.icon
       | Projects
+    .ui.stackable.equal.width.grid.container
+      .column
+        p
+          | Source code for most of my projects are available over on GitHub.
+          | Most of my projects are for fun and to teach myself more about a specific topic, such as this website.
+          | I also make small tools like 
+          a(href='https://github.com/RetroJect/DBIOSD/') DBIOSD 
+          | for automation of more tedious tasks.
+        p
+          | My main goal for all of my projects is to learn more about the languages and tools that I'm using.
+          | With my website I first made it in strictly HTML as I taught myself the basics.
+          | Then I moved to a NodeJS version running with Express and learned the basics of Javascript and HTMl templating with Pug.
+          | Now on my third iteration I've expanded on that base knowledge and incorperated new elements like 
+          a(href='https://fomantic-ui.com/') Fomantic 
+          | for styling and a better understanding of Pug.
+        p
+          | Each of my projects has gone through revisions and updates as I continue to learn more about the resources I'm using.
+          | I strive to learn new things with each project and I thrive on finding new and better ways to impliment features.
+          | I wasn't totally happy with the last version of my website a few months after I finished it because I had learned more and felt I could do better.
+          | Redoing a project is one of my favorite things to do because it means I've learned enough to make it better than it previously was.
+      .column
+        .ui.raised.segment
+          h3.ui.header RetroJect on GitHub
+          .ui.relaxed.divided.list
+            each repo in data
+              .item
+                i.large.github.middle.aligned.icon
+                .content
+                  .header
+                    a(href=repo.url) #{repo.name}
+                  .meta
+                    div Created on: #{repo.created}
+                    div Last pushed at: #{repo.pushed}
+                  .description "#{repo.description}"
 
   //- Spacer
   .ui.hidden.divider
@@ -53,15 +87,15 @@ block content
         .five.wide.column
           h4.ui.inverted.header Created by Grayson Doshier
           .ui.center.aligned.container
-            a(href="https://github.com/RetroJect/")
+            a(href="https://www.github.com/RetroJect/")
               i.large.link.circular.github.icon
-            a(href="https://github.com/RetroJect/")
+            a(href="https://www.linkedin.com/in/grayson-doshier/")
               i.large.link.circular.linkedin.icon
-            a(href="https://github.com/RetroJect/")
+            a(href="https://www.twitter.com/DoshierGrayson")
               i.large.link.circular.twitter.icon
-            a(href="https://github.com/RetroJect/")
+            a(href="https://www.youtube.com/channel/UC_yg135f7cV5gvDjJdvqPVA")
               i.large.link.circular.youtube.icon
-            a(href="https://github.com/RetroJect/")
+            a(href="https://www.twitch.tv/retroject")
               i.large.link.circular.twitch.icon
         .three.wide.column
           button.ui.blue.inverted.labeled.icon.button(href='#Top')

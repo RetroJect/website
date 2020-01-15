@@ -2,19 +2,23 @@ extends default
 
 block headers
   link(rel='stylesheet', type='text/css', href='../css/home.css')
+  script(type="text/javascript", src="https://platform.linkedin.com/badges/js/profile.js", async, defer)
 
 block content
   // Header and Navigation
-  .ui.inverted.vertical.masthead.center.aligned.segment#Top
+  .ui.inverted.vertical.masthead.center.aligned.segment#Home
     .ui.container
-      .ui.large.inverted.labeled.pointing.secondary.menu
-        a.item.active
+      .ui.inverted.labeled.pointing.secondary.fluid.four.item.menu
+        a.item.active(href='#Home')
           i.home.icon
           | Home
-        a.item
+        a.item(href='#About')
+          i.user.icon
+          | About Me
+        a.item(href='#Experience')
           i.code.icon
           | Experience
-        a.item
+        a.item(href='#Projects')
           i.github.icon
           | Projects
     .ui.text.container
@@ -24,54 +28,117 @@ block content
   //- Spacer
   .ui.hidden.divider
 
+  // About Section
+  .ui.container#About
+    h2.ui.horizontal.divider.header
+      i.user.icon
+      | About Me
+    .ui.text.container
+      p
+        | I'm an undergradute studying for a BS in Computer Science looking to become a software engineer.
+        | There's so many aspects of this field that it is hard for me to pick just one to strive for.
+        | My personal time normally consists of researching new topics that interest me and learning everything I can about it.
+        | Throughout my life I've always loved to learn which pushes me to try new things and take on challanges.
+        | I've taught myself a lot by creating an idea for a project that I want to make, and then researching how it's done.
+      p
+        | While I have taken classes on Web Design, I first taught myself almost everything I know because I thought it was interesting.
+        | For example, this website is the product of teaching myself a combination of HTML, Javascript, and the tools to use them such as NodeJS, Express, Pug, Git, and many more.
+        | All of these things I've taught myself far before I was formally introduced to them in my classes.
+        | My goal as a developer is to be able to take on any project and learn how to get it done, and do it correctly.
+      p
+        | Aside from my future career, I also enjoy being a content creator online.
+        | For years I've been active on YouTube and 
+        a(href='https://twitch.tv/RetroJect/').animating Twitch
+          i.fitted.twitch.icon
+        | , but more recently I've decided to take Twitch more seriously.
+        | While it's not what I want to do for a profession, I still really enjoy playing games live and interacting with viewers every so often.
+
+  //- Spacer
+  .ui.hidden.divider
+
   // Experience Section
-  .ui.container
+  .ui.container#Experience
     h2.ui.horizontal.divider.header
       i.code.icon
       | Experience
+    .ui.stackable.middle.aligned.grid.container
+      .ten.wide.column
+        p
+          | As an undergraduate student I am trained in all necessary aspects of Computer Science ranging from basic hardware to advanced algorithm analysis and design.
+          | I'm trained in C++, C, HTML, Shell, and Javascript through my classes, and I'm familiar with Python, Bash, Powershell, Batch, and Java from work and personal projects.
+          | Currenly, I am at a Junior standing and have completed most of the required classes for my degree.
+          | All details about my degree can be found on my 
+          a(href='https://www.csuchico.edu/csci/programs/bs-compsci.shtml').animating college's website.
+        p
+          | Beyond the classroom I have had the opportunity to participate in the 
+          a(href='https://www.acm.org/').animating ACM 
+          | programming competition as a hand-selected competetor.
+          | In my sophomore year one of my professors approached me about the competition as he believed I would be a perfect fit for their team.
+          | I had never done a competition before, but he recognized my work in the classroom and thought I had what they needed.
+          | At the competition I was placed on a team of three students, including myself, who had never participated in a competition before.
+          | Our team was the only one that hadn't competed before and we ended up placing third in our region.
+          | This experience taught me a lot about working in a collaborative programming team, even though it was relatively small.
+        p
+          | Currently I work for 
+          a(href='https://csuchico.edu/itss').animating IT Support Services 
+          | on my campus where I am an Assistant Lab Services Coordinator.
+          | Myself and my manager are responsilbe for over 50 laptop and desktop comptuer labs running Windows totaling about one thousand machines.
+          | Personally, I write automation scripts and tools that make us more efficient in our work as well as deploying computers to customers on campus.
+          | I've listed one of the projects I've made at work below in my Projects section titled "DBIOSD" and all the code for it is listed on GitHub, also linked below.
+          | My past work experience and other descriptions of my roles are also available on my 
+          a(href='https://www.linkedin.com/in/grayson-doshier/').animating LinkedIn 
+          | page.
+      .two.wide.column.center.aligned
+        .LI-profile-badge(data-version="v1", data-size="large", data-locale="en_US", data-type="vertical", data-theme="dark", data-vanity="grayson-doshier")
+          a.LI-simple-link(href='https://www.linkedin.com/in/grayson-doshier?trk=profile-badge') Grayson Doshier
 
   //- Spacer
   .ui.hidden.divider
 
   // Projects Section
-  .ui.container
+  .ui.container#Projects
     h2.ui.horizontal.divider.header
       i.github.icon
       | Projects
     .ui.stackable.equal.width.grid.container
+      // Text
       .column
         p
           | Source code for most of my projects are available over on GitHub.
           | Most of my projects are for fun and to teach myself more about a specific topic, such as this website.
           | I also make small tools like 
-          a(href='https://github.com/RetroJect/DBIOSD/') DBIOSD 
+          a(href='https://github.com/RetroJect/DBIOSD/').animating DBIOSD 
           | for automation of more tedious tasks.
         p
           | My main goal for all of my projects is to learn more about the languages and tools that I'm using.
           | With my website I first made it in strictly HTML as I taught myself the basics.
           | Then I moved to a NodeJS version running with Express and learned the basics of Javascript and HTMl templating with Pug.
           | Now on my third iteration I've expanded on that base knowledge and incorperated new elements like 
-          a(href='https://fomantic-ui.com/') Fomantic 
-          | for styling and a better understanding of Pug.
+          a(href='https://fomantic-ui.com/').animating Fomantic 
+          | for styling and a better understanding of 
+          a(href='https://pugjs.org/').animating Pug 
+          | for HTML templating.
         p
           | Each of my projects has gone through revisions and updates as I continue to learn more about the resources I'm using.
           | I strive to learn new things with each project and I thrive on finding new and better ways to impliment features.
           | I wasn't totally happy with the last version of my website a few months after I finished it because I had learned more and felt I could do better.
           | Redoing a project is one of my favorite things to do because it means I've learned enough to make it better than it previously was.
+      // Github Repos
       .column
         .ui.raised.segment
           h3.ui.header RetroJect on GitHub
-          .ui.relaxed.divided.list
+          .ui.feed
             each repo in data
-              .item
-                i.large.github.middle.aligned.icon
+              .event
+                .label
+                  img(src=repo.avatar)
                 .content
-                  .header
+                  .date(title=repo.pushed).popup Modified a few #{repo.difference} ago
+                  .summary
                     a(href=repo.url) #{repo.name}
-                  .meta
-                    div Created on: #{repo.created}
-                    div Last pushed at: #{repo.pushed}
-                  .description "#{repo.description}"
+                      i.code.branch.icon
+                  .extra.text
+                    | #{repo.description}
 
   //- Spacer
   .ui.hidden.divider
@@ -79,12 +146,12 @@ block content
   // Footer
   .ui.inverted.vertical.segment
     .ui.container
-      .ui.stackable.inverted.divided.equal.height.grid.center.aligned
-        .five.wide.column
+      .ui.stackable.inverted.divided.equal.height.grid.middle.aligned.centered
+        .five.wide.column.center.aligned
           h4.ui.inverted.header Made with NodeJS and Express
           p Find the source code for this page on 
-            a(href="https://github.com/RetroJect/Website/") GitHub
-        .five.wide.column
+            a(href="https://github.com/RetroJect/Website/").animating GitHub
+        .five.wide.column.center.aligned
           h4.ui.inverted.header Created by Grayson Doshier
           .ui.center.aligned.container
             a(href="https://www.github.com/RetroJect/")
@@ -97,7 +164,10 @@ block content
               i.large.link.circular.youtube.icon
             a(href="https://www.twitch.tv/retroject")
               i.large.link.circular.twitch.icon
-        .three.wide.column
-          button.ui.blue.inverted.labeled.icon.button(href='#Top')
+        .three.wide.column.center.aligned
+          button.ui.blue.inverted.labeled.icon.button#toTop
             i.angle.double.up.icon
             | To The Top
+  
+  // jQuery and other things
+  script(src='../js/home.js')

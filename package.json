@@ -4,7 +4,7 @@
   "description": "A small Node Website",
   "main": "index.js",
   "scripts": {
-    "start": "npx pm2 start index.js --watch"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,5 @@
     "github-api": "^3.3.0",
     "pug": "^2.0.4"
   },
-  "devDependencies": {
-    "pm2": "^3.2.9"
-  }
+  "devDependencies": {}
 }

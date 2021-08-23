@@ -1,31 +1,38 @@
 {
   "name": "website",
-  "version": "2.0.0",
-  "description": "A small Node Website",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RetroJect/Website.git"
-  },
-  "keywords": [
-    "Node",
-    "HTML",
-    "Pug"
-  ],
-  "author": "Grayson Doshier",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RetroJect/Website/issues"
-  },
-  "homepage": "https://github.com/RetroJect/Website#readme",
+  "version": "3.0.0",
+  "private": true,
   "dependencies": {
-    "date-diff": "^0.2.1",
-    "express": "^4.16.4",
-    "github-api": "^3.3.0",
-    "pug": "^2.0.4"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
   },
-  "devDependencies": {}
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
